@@ -1,16 +1,31 @@
-#loading files from laptop to AMI
-hdfs dfs -mkdir /user/w205/exercise_1
 
-wget https://s3.amazonaws.com/ucbdatasciencew205/lab_datasets/
+##Load Datafiles from laptop to AMI
+su - w205
+hdfs dfs -mkdir /user/w205/hospital_compare
 
-#removing header and renaming files
-mkdir hospital_files
-cd hospital_files
-tail -n +2 Hospital General Information.csv > hospitals.csv
-tail -n +2 Timely and Effective Care.csv > effective_care.csv
-tail -n +2 Readmissions and Deaths.csv > readmissions.csv
-tail -n +2 Measure Dates.csv > Measures.csv
-tail -n +2 hvbp_hcahps_05_28_2015.csv > survey_results.csv
+hdfs dfs -mkdir /user/w205/hospital_compare/hospitals
+hdfs dfs -mkdir /user/w205/hospital_compare/effective_care
+hdfs dfs -mkdir /user/w205/hospital_compare/readmissions
+hdfs dfs -mkdir /user/w205/hospital_compare/Measures
+hdfs dfs -mkdir /user/w205/hospital_compare/surveys_responses
 
-#loading files from AMI to HDFS
-sudo -u hdfs dfs -put ~/w205/exercise_1/hospital_files/* hdfs:/data/w205/hospital_files
+
+wget -O "Hospital_Revised_Flatfiles.zip" https://data.medicare.gov/views/bg9k-emty/files/Nqcy71p9Ss2RSBWDmP77H1DQXcyacr2khotGbDHHW_s?content_type=application%2Fzip%3B%20charset%3Dbinary&filename=Hospital_Revised_Flatfiles.zip
+
+
+unzip Hospital_Revised_Flatfiles.zip -d data_file
+
+# Remove header and rename data files (eliiminating spaces)
+tail -n+2 data_file/"Hospital General Information.csv" > data_file/"hospitals.csv"
+tail -n+2 data_file/"Timely and Effective Care - Hospital.csv" > data_file/"effective_care.csv"
+tail -n+2 data_file/"Readmissions and Deaths - Hospital.csv" > data_file/"readmissions.csv"
+tail -n+2 data_file/"Measure Dates.csv" >data_file/"Measures.csv"
+tail -n+2 data_file/"hvbp_hcahps_05_28_2015.csv" > data_file/"surveys_responses.csv"
+
+
+
+hdfs dfs -put data_file/"hospital.csv" /user/w205/hospital_compare/hospitals
+hdfs dfs -put data_file/"effective_care.csv" /user/w205/hospital_compare/effective_care
+hdfs dfs -put data_file/"readmissions.csv" /user/w205/hospital_compare/readmissions
+hdfs dfs -put data_file/"measures.csv" /user/w205/hospital_compare/Measures
+hdfs dfs -put data_file/"surveys_response.csv" /user/w205/hospital_compare/surveys_responses
