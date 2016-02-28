@@ -1,0 +1,26 @@
+The procedures with the greatest variability between hospitals are the following 10:
+
+ED_1b	8449.556079558137
+ED_2b	3832.230884726955
+OP_18b	1652.985135626951
+STK_4	570.249835634451
+OP_3b	456.47222222222223
+PSI_4_SURG_COMP	396.97253797988213
+OP_21	298.67142779221007
+VTE_5	293.99122499230543
+OP_20	279.670049802634
+
+The corresponding measure names are below:
+
+ED1	8449.556079558137
+ED2	3832.230884726955
+OP 18	1652.985135626951
+Thrombolytic Therapy	570.249835634451
+Median Time to Transfer to Another Facility for Acute Coronary Intervention	456.47222222222223
+Deaths among Patients with Serious Treatable Complications after Surgery	396.97253797988213
+Median time to pain med	298.67142779221007
+Warfarin therapy discharge instructions	293.99122499230543
+Door to diagnostic eval	279.670049802634
+Healthcare workers given influenza vaccination	267.05120024228796
+
+The examined procedures were the union of sufficiently sampled (>50) timely and effective care measure and complications, readmissions and deaths measures. Basic variance tests were applied to scores for these measures between hospitals, and these are the easily computable results. Using variance to calculate variability, so long as sample size is sufficient, is a justified strategy for determining which procedures vary most in quality between hospitals.

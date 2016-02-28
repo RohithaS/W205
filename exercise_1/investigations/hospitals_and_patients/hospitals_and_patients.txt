@@ -1,0 +1,24 @@
+The hospital scores are negatively correlated with survey response scores.
+
+Results:
+
+Correlation between average total_score (which is equal to the average of timely and effective care scores times the average of readmissions and deaths scores for hospitals with large enough samples) and survey resultsare as follows:
+
+Overall achievement: -0.01749052844951342
+Hcahps base score: -0.37566559831957086
+Hcahps consistency score: -0.19049679094203648
+
+Correlations between average timely and effective care score and survey results are:
+
+Overall achievement: -0.09289018778561325
+Hcahps base score: -0.2920312460716303
+Hcahps consistency score: -0.294694495770566
+
+Correlations between average  readmissions and deaths scores and survey results are:
+
+Overall achievement: 0.007903633934134907
+Hcahps base score: -0.33638942857702175
+Hcahps consistency score: -0.11959063234558666
+
+One explanation is that my assumption that higher scores are better for most hospital measures is not always true.
+If, for a sufficient number of measures, higher scores are indications of worse performance, it would make for a better result.

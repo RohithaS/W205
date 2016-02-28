@@ -1,0 +1,15 @@
+Top 10 states by average timely and effective care scores:
+
+DC	138.47457627118644
+DE	127.33898305084746
+NY	115.77272727272727
+GU	115.69565217391305
+NM	115.35384615384615
+MD	115.16176470588235
+CT	114.39393939393939
+NJ	112.65151515151516
+PR	111.96875
+NV	111.0909090909091
+
+Explanation of the criteria taken under consideration:
+Timely and effective care is a measure of patient experience quality, complications, readmissions and deaths seems to measure something different.
