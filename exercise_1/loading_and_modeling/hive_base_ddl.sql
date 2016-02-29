@@ -17,7 +17,8 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT
   'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
 LOCATION
-  'hdfs://localhost:8020/user/w205/hospital_compare/Hospital_General_Information';
+  '/user/w205/hospital_compare/Hospital_General_Information';
+
 
 
 DROP TABLE Measures;
@@ -35,7 +36,7 @@ STORED AS INPUTFORMAT
 OUTPUTFORMAT
   'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
 LOCATION
-  'hdfs://localhost:8020/user/w205/hospital_compare/Measure_Dates';
+  '/user/w205/hospital_compare//Measure_Dates';
 
 
   DROP TABLE effective_care;
@@ -63,7 +64,7 @@ LOCATION
   OUTPUTFORMAT
     'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
   LOCATION
-    'hdfs://localhost:8020/user/w205/hospital_compare/Timely_And_Effective_Care_Hospital';
+    '/user/w205/hospital_compare/hospital_compare/Timely_And_Effective_Care_Hospital';
 
     DROP TABLE readmissions;
     CREATE EXTERNAL TABLE `readmissions`(
@@ -92,7 +93,7 @@ LOCATION
     OUTPUTFORMAT
       'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
     LOCATION
-  'hdfs://localhost:8020/user/w205/hospital_compare/Readmissions_And_Deaths_Hospital';
+      '/user/w205/hospital_compare/hospital_compare/Readmissions_And_Deaths_Hospital';
 
     DROP TABLE survey_responses;
     CREATE EXTERNAL TABLE `survey_responses`(
@@ -136,4 +137,4 @@ LOCATION
     OUTPUTFORMAT
       'org.apache.hadoop.hive.ql.io.HiveIgnoreKeyTextOutputFormat'
     LOCATION
-  'hdfs://localhost:8020/user/w205/hospital_compare/hvbp_hcahps_05_28_2015';
+      '/user/w205/hospital_compare/hvbp_hcahps_05_28_2015';
